@@ -1,7 +1,8 @@
 import axios from 'axios'
 
-async function getHtml(html){
+async function getHtml(url){
 
+    const html = 'Get cool'
     console.log(html)
 }
 
