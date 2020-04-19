@@ -3,7 +3,10 @@ import cheerio from 'cheerio'
 
 export async function getHtml(url){
 
-    const {date: html} = await axios.get(url)
+    const { date: html } = await axios({
+        method: 'get',
+        url: url,
+    })
     .then(function(res) {
         console.log(res)
     })
