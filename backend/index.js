@@ -1,4 +1,4 @@
-import getHtml from './scrapper'
+import {getHtml} from './scrapper'
 
 
-async function()
+console.log(getHtml())
