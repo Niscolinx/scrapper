@@ -1,5 +1,6 @@
 import axios from 'axios'
 
-export async const scrapper =() => {
-    
+export async function getHtml(html){
+
+    console.log(html)
 }
