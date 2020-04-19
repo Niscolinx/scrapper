@@ -1,6 +1,8 @@
 import axios from 'axios'
 
-export async function getHtml(html){
+async function getHtml(html){
 
     console.log(html)
 }
+
+export { getHtml }
