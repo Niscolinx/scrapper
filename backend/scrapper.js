@@ -1,4 +1,5 @@
 import axios from 'axios'
+import cheerio from 'cheerio'
 
 export async function getHtml(url){
 
@@ -6,3 +7,7 @@ export async function getHtml(url){
     return html;
 }
 
+export async function getConnections(html){
+
+
+}
