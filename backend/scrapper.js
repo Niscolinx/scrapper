@@ -3,14 +3,7 @@ import cheerio from 'cheerio'
 
 export async function getHtml(url){
 
-    const { date: html } = await axios({
-        method: 'get',
-        url: url,
-        auth: {
-            username: 'munisco12@gmail.com',
-            password: 'munisco5'
-        },
-    })
+    const {date: html} = await axios.get(url)
     .then(function(res) {
         console.log(res)
     })
