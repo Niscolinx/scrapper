@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "nodemon -r esm cli.js"
+        "dev": "nodemon -r esm ./profile-scraper/cli.js",
         "start": "node --harmony ./email-extractor/index.js",
         "build": "webpack --mode production",
         "dev-build": "webpack --watch=true --mode development"
