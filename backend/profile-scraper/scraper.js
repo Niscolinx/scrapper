@@ -139,6 +139,7 @@ async function getCompanyOrPeopleDetails(url) {
 			return null;
 	}
 
+	console.log('this is the result*******************************', result)
 	return result;
 }
 
