@@ -26,8 +26,6 @@ app.get('/profile', (req, res, next) => {
 
 })
 
-app.listen('8000', ()=>{
-	
-})
+app.listen('8000', () => console.log('Running on port http://localhost:8000'))
 
 
