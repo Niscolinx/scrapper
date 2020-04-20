@@ -8,7 +8,7 @@ const app = express()
 
 // })
 
-console.log(cli)
+console.log(cli())
   
 
 
