@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "dev": "node -r esm ./backend/index.js",
-        "start": "node --harmony index.js",
+        "start": "node --harmony ./backend/email-extractor/index.js",
         "build": "webpack --mode production",
         "dev-build": "webpack --watch=true --mode development"
     },
