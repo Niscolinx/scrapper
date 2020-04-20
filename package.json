@@ -10,14 +10,14 @@
         "dev-build": "webpack --watch=true --mode development"
     },
     "bin": {
-        "linkedin-scrap": "./src/cli.js"
+        "linkedin-scrap": "./backend/profile-extractor/cli.js"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Niscolinx/scrapper.git"
     },
     "keywords": [],
-    "author": "",
+    "author": "Igoanugwo Collins",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/Niscolinx/scrapper/issues"
