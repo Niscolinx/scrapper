@@ -21,7 +21,7 @@ const cli = async () => {
 };
 
 app.get('/profile', (req, res, next) => {
-
+	console.log("starting to load the profiles")
 	cli()
 
 })
