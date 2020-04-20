@@ -17,8 +17,8 @@ const cli = async () => {
 	return;
 };
 
-module.exports{
-	
+module.exports = {
+	cli
 }
 
 
