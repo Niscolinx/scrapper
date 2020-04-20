@@ -3,7 +3,9 @@ import cli from './profile-scraper/cli'
 
 const app = express()
 
-app.get('/profile', (req, res, next) => {
+// app.get('/profile', (req, res, next) => {
 
 
-})
+// })
+
+cli()
