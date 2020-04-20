@@ -8,4 +8,9 @@ const app = express()
 
 // })
 
-cli()
+    (async () => {
+        const profile = await cli()
+        console.log(profile)
+    })()
+
+
