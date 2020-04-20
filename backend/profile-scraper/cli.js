@@ -14,7 +14,6 @@ const cli = async () => {
 	} catch(e) {
 		console.error(e);
 	}
-	return;
 };
 
 
