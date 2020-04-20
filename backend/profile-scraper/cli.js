@@ -1,6 +1,14 @@
 #!/usr/bin/env node
+const express = require('express')
 
 const scraper = require('./scraper');
+
+const app = express()
+
+// app.get('/profile', (req, res, next) => {
+
+
+// })
 
 const cli = async () => {
 	if(process.argv.length < 3 || !process.argv[2]) {
