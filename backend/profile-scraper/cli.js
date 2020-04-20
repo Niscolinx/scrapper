@@ -17,6 +17,5 @@ const cli = async () => {
 	return;
 };
 
-cli()
 
 
