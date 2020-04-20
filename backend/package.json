@@ -9,7 +9,7 @@
         "dev-build": "webpack --watch=true --mode development"
     },
     "bin": {
-        "linkedin-scrap": "./profile-extractor/cli.js"
+        "linkedin-scrap": "./profile-scraper/cli.js"
     },
     "repository": {
         "type": "git",
