@@ -3,7 +3,7 @@ const fs = require('fs');
 const request = require('request-promise');
 const Entities = require('html-entities').XmlEntities;
  
-const config = require('../config');
+const config = require('./config');
 const debugFile = './assets/debug.json';
 const logger = require('@coya/logger')();
 
