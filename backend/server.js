@@ -1,5 +1,5 @@
-import express from 'express'
-import cli from './profile-scraper/cli'
+const express = require('express')
+const cli = require('./profile-scraper/cli')
 
 const app = express()
 
