@@ -9,8 +9,6 @@ const app = express()
 // })
 
 cli()
-    (async () => {
-        console.log(profile)
-    })()
+  
 
 
