@@ -134,7 +134,6 @@ async function getCompanyOrPeopleDetails(url) {
 			}
 		}
 
-		// this company or people does not exist
 		if (!result.firstName && !result.name)
 			return null;
 	}
@@ -144,5 +143,5 @@ async function getCompanyOrPeopleDetails(url) {
 }
 
 module.exports = {
-	getCompanyOrPeopleDetails
+	getMyProfile
 };
