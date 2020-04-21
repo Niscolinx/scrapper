@@ -57,7 +57,7 @@ else {
 	(async () => {
 		if(config.dbUrl)
 			try {
-				await Counter.connect(config.dbUrl);
+				//await Counter.connect(config.dbUrl);
 			} catch (e) {
 				logger.error(e);
 				process.exit(1);
