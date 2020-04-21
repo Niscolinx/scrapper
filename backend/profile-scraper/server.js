@@ -9,8 +9,8 @@ const logger = require('@coya/logger')();
 // configuration variables
 const maximumShotsNumber = 100;
 const serverPort = 8090;
-const webAppFile = path.resolve(__dirname, '../web/index.html');
-const webAssetsFolder = path.resolve(__dirname, '../web/assets');
+const webAppFile = path.resolve(__dirname, '../../frontend/src/index.html');
+const webAssetsFolder = path.resolve(__dirname, '../../frontend/assets');
 
 function createApp() {
 	const app = express();
