@@ -14,7 +14,7 @@ const cli = async () => {
 
 	try {
 		const result = await scraper.getCompanyOrPeopleDetails(process.argv[2]);
-		//console.log(result);
+		console.log(result);
 	} catch (e) {
 		console.error(e);
 	}
