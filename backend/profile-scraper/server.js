@@ -7,7 +7,7 @@ const scraper = require('./scraper');
 const logger = require('@coya/logger')();
 
 // configuration variables
-const maximumShotsNumber = 10;
+const maximumShotsNumber = 100;
 const serverPort = 8080;
 const webAppFile = path.resolve(__dirname, '../../frontend/public/index.html');
 const webAssetsFolder = path.resolve(__dirname, '../../frontend/assets');
