@@ -9,7 +9,7 @@ const logger = require('@coya/logger')();
 // configuration variables
 const maximumShotsNumber = 10;
 const serverPort = 8080;
-const webAppFile = path.resolve(__dirname, '../../frontend/scraper/public/index.html');
+const webAppFile = path.resolve(__dirname, '../../frontend/public/index.html');
 const webAssetsFolder = path.resolve(__dirname, '../../frontend/assets');
 
 function createApp() {
