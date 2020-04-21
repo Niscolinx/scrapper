@@ -14,7 +14,7 @@ const scraper = require('./scraper');
 	} catch (e) {
 		console.error(e);
 	}
-}());
+})();
 
 
 
