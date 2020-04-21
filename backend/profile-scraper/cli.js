@@ -24,7 +24,7 @@ cli()
 
 app.get('/profile', (req, res, next) => {
 	console.log("starting to load the profiles"
-
+	)
 })
 
 app.listen(8000, () => {
