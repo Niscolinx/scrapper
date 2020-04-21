@@ -9,7 +9,7 @@ const app = express()
 const cli = async () => {
 	if (process.argv.length < 3 || !process.argv[2]) {
 		console.log('Usage : node backend/profile-scraper/cli.js LINKEDIN_URL');
-		return;
+	
 	}
 
 	try {
@@ -20,9 +20,10 @@ const cli = async () => {
 	}
 };
 
+cli()
+
 app.get('/profile', (req, res, next) => {
-	console.log("starting to load the profiles")
-	cli()
+	console.log("starting to load the profiles"
 
 })
 
