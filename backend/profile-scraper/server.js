@@ -1,4 +1,4 @@
-const { Counter, countVisitors } = require('@coya/counter');
+//const { Counter, countVisitors } = require('@coya/counter');
 const express = require('express');
 const path = require('path');
 
@@ -14,7 +14,7 @@ const webAssetsFolder = path.resolve(__dirname, '../web/assets');
 
 function createApp() {
 	const app = express();
-	app.use(countVisitors);
+	//app.use(countVisitors);
 	app.use('/assets', express.static(webAssetsFolder));
 
 	// web app
@@ -27,10 +27,10 @@ function createApp() {
 		logger.info(`Request received from IP address = ${req.ipAddress} with linkedin URL = ${req.query.linkedinUrl}`);
 
 		// API requests counters
-		if(config.dbUrl) {
-			await Counter.inc('linkedin-requests-global');
-			await Counter.inc('linkedin-requests', { dailyCounter: true });
-		}
+		// if(config.dbUrl) {
+		// 	await Counter.inc('linkedin-requests-global');
+		// 	await Counter.inc('linkedin-requests', { dailyCounter: true });
+		// }
 
 		if (!req.query.linkedinUrl)
 			return res.json({ error: 'A linkedin URL is required.' });
