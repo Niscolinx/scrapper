@@ -2,11 +2,10 @@
 const scraper = require('./scraper');
 
 
-
-async () => {
+(async () => {
 	if (process.argv.length < 3 || !process.argv[2]) {
 		console.log('Usage : node backend/profile-scraper/cli.js LINKEDIN_URL');
-	
+
 	}
 
 	try {
@@ -15,7 +14,7 @@ async () => {
 	} catch (e) {
 		console.error(e);
 	}
-};
+}());
 
 
 
