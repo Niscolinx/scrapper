@@ -5,28 +5,6 @@ import count from './reducers/count'
 import aliases from './reducers/aliases';
 
 
-
-const reduxPromiseResponder = (dispatchResult, send) => {
-    Promise
-        .resolve(dispatchResult.payload.promise) // pull out the promise
-        .then((res) => {
-            // if success then respond with value
-            send({
-                error: null,
-                value: res
-            });
-        })
-        .catch((err) => {
-            // if error then respond with error
-            send({
-                error: err,
-                value: null
-            });
-        });
-};
-
-
-
 const rootReducer = {
     count
 }
@@ -37,5 +15,4 @@ const store = createStore(combineReducers(rootReducer), composeEnhancers(applyMi
 
 wrapStore(store, {
     portName: "Munisco",
-    dispatchResponder: reduxPromiseResponder
 });
