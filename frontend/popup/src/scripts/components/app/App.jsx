@@ -14,9 +14,15 @@ class App extends Component {
     super(props);
   }
 
-  
   componentDidMount() {
-    this.props.dispatch(getSession());
+    // promise returned from `dispatch()`
+    this.props.dispatch(getSession())
+      .then((data) => {
+        // the response data
+      })
+      .catch((err) => {
+        // something broke in the background store
+      });
   }
 
   render() {
