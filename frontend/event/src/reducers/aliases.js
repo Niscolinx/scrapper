@@ -1,5 +1,8 @@
-const getSession = (orginalAction) => {
-    // return a thunk/promise/etc
+const getSession = (originalAction) => {
+    return (dispatch, getState) => {
+        originalAction.payload = getState().session[originalAction._sender.tab.id];
+        return originalAction;
+    }
 };
 
 export default {
