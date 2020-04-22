@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "RCR",
-  "description": "React, Chrome, and Redux example",
+  "name": "LinkedIn scrapper",
+  "description": "Scrapping LinkedIn profile data and organization emails",
   "version": "0.0.0.1",
   "background": {
     "scripts": [
