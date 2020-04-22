@@ -1,23 +1,28 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+const getSession = () => {
+  const data = {
+    type: ACTION_GET_SESSION,
+    payload: {} //payload is the data/object that is resolved by the promise
+  };
+
+  return data;
+};
 class App extends Component {
   constructor(props) {
     super(props);
   }
 
+  
   componentDidMount() {
-    document.addEventListener('click', () => {
-      this.props.dispatch({
-        type: 'ADD_COUNT'
-      });
-    });
+    this.props.dispatch(getSession());
   }
 
   render() {
     return (
       <div>
-        Click Count: {this.props.count}
+        {this.props.session && this.props.users[this.props.session.userId].name}
       </div>
     );
   }
@@ -25,7 +30,8 @@ class App extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    count: state.count
+    session: state.session,
+    users: state.users
   };
 };
 
