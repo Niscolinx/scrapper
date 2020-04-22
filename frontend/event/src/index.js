@@ -1,5 +1,5 @@
 import {createStore} from 'redux';
-import rootReducer from './reducers';
+import rootReducer from './reducers/aliases';
 import count from './reducers/count'
 import aliases from '../aliases';
 
