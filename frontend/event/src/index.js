@@ -37,7 +37,7 @@ const rootReducer = {
 }
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
-const store = createStore(combineReducers(rootReducer), composeEnhancers(applyMiddleware(alias(aliases))
+const store = createStore(combineReducers(rootReducer), composeEnhancers(applyMiddleware()
 ))
 
 wrapStore(store, {
