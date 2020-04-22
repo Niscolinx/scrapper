@@ -43,5 +43,6 @@ const store = createStore(combineReducers(rootReducer), composeEnhancers(applyMi
 ))
 
 wrapStore(store, {
-    portName = "Munisco"
+    portName = "Munisco",
+    dispatchResponder: reduxPromiseResponder
 });
