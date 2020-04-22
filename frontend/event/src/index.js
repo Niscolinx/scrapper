@@ -1,4 +1,4 @@
-import {createStore} from 'redux';
+import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
 import {wrapStore} from 'webext-redux';
 import { alias } from 'webext-redux';
 import count from './reducers/count'
