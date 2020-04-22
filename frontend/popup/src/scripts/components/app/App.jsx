@@ -6,7 +6,7 @@ const getSession = () => {
     type: ACTION_GET_SESSION,
     payload: {} //payload is the data/object that is resolved by the promise
   };
-
+console.log(data)
   return data;
 };
 class App extends Component {
