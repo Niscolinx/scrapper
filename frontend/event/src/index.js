@@ -1,12 +1,10 @@
-import {wrapStore} from 'webext-redux';
 import {createStore} from 'redux';
+import {wrapStore} from 'webext-redux';
 import { alias } from 'webext-redux';
 import count from './reducers/count'
 import aliases from './reducers/aliases';
 
-const middleware = [
-    alias(aliases)
-];
+
 
 /**
  * Respond to action based on `redux-promise-middleware` result
@@ -39,7 +37,7 @@ const rootReducer = {
 }
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
-const store = createStore(combineReducers(rootReducer), composeEnhancers(applyMiddleware(middleware)
+const store = createStore(combineReducers(rootReducer), composeEnhancers(applyMiddleware(alias(aliases))
 ))
 
 wrapStore(store, {
