@@ -5,4 +5,6 @@ import {wrapStore} from 'webext-redux';
 
 const store = createStore(rootReducer, {});
 
-wrapStore(store);
+wrapStore(store, {
+    portName = "Munisco"
+});
