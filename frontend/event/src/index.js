@@ -6,11 +6,6 @@ import aliases from './reducers/aliases';
 
 
 
-/**
- * Respond to action based on `redux-promise-middleware` result
- * @param  {object} dispatchResult The resulting object from `store.dispatch()`
- * @param  {func}   send           func to be called when sending response. Should be in form {value, error}
- */
 const reduxPromiseResponder = (dispatchResult, send) => {
     Promise
         .resolve(dispatchResult.payload.promise) // pull out the promise
@@ -37,7 +32,7 @@ const rootReducer = {
 }
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
-const store = createStore(combineReducers(rootReducer), composeEnhancers(applyMiddleware()
+const store = createStore(combineReducers(rootReducer), composeEnhancers(applyMiddleware(alias(aliases))
 ))
 
 wrapStore(store, {
