@@ -1,3 +1,4 @@
+import {wrapStore} from 'webext-redux';
 import {createStore} from 'redux';
 import { alias } from 'webext-redux';
 import count from './reducers/count'
@@ -32,7 +33,6 @@ const reduxPromiseResponder = (dispatchResult, send) => {
 };
 
 
-import {wrapStore} from 'webext-redux';
 
 const rootReducer = {
     count
