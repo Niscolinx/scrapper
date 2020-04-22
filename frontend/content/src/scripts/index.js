@@ -7,7 +7,7 @@ import App from './components/app/App';
 
 const proxyStore = new Store({
   state: {},
-  portName= 'Munisco'
+  portName:'Munisco'
 });
 
 const anchor = document.createElement('div');
