@@ -7,6 +7,7 @@ import {Store} from 'webext-redux';
 import {Provider} from 'react-redux';
 
 const proxyStore = new Store({
+  state = {},
   portName: 'Munisco'
 });
 
