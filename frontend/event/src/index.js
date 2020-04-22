@@ -1,4 +1,5 @@
 import {createStore} from 'redux';
+import { alias } from 'webext-redux';
 import count from './reducers/count'
 import aliases from './reducers/aliases';
 
