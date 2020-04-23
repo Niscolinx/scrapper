@@ -5,6 +5,10 @@ import {Store} from 'webext-redux';
 
 import App from './components/app/App';
 
+console.log(
+'the content file'
+)
+
 const proxyStore = new Store({
   state: {},
   portName:'Munisco'
