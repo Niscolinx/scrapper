@@ -10,7 +10,7 @@ const initialState = {
 const authState = (state, action) => {
     console.log('connected to redux, woow')
     return {
-        loading: action.payload
+        loading: 'hello world'
     }
 }
 
