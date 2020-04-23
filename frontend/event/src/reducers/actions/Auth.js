@@ -3,6 +3,7 @@ import fire from '../../../../firebase/firebase'
 
 export const fetch = () => {
     return dispatch => {
+        dispatch(fetchGotten(response))
         console.log('beginning to fetch')
 
         fetch("https://crunchbase-crunchbase-v1.p.rapidapi.com/odm-organizations", {
@@ -14,7 +15,6 @@ export const fetch = () => {
         })
             .then(response => {
                 console.log(response);
-                dispatch(fetchGotten(response))
             })
             .catch(err => {
                 console.log(err);
