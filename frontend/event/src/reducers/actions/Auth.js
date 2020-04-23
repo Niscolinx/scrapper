@@ -9,7 +9,7 @@ export const fetchGotten = (data) => {
     }
 }
 export const fetch = () => {
-    return dispatch => {
+    return function(dispatch){
         dispatch(fetchGotten(response))
         console.log('beginning to fetch')
 
