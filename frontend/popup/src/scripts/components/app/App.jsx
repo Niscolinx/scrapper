@@ -9,16 +9,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // promise returned from `dispatch()`
-    this.props.dispatch(getSession())
-      .then((data) => {
-        console.log('this is the data from backend', data)
-        // the response data
-      })
-      .catch((err) => {
-        (console.log('this is the error from backend', err))
-        // something broke in the background store
-      });
+      this.props.onInitAuth()
   }
 
   render() {
