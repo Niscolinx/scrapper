@@ -6,6 +6,8 @@ export const authStart = () => {
 
     console.log('beginning to fetch')
 
+    let data = []
+
     fetch("https://crunchbase-crunchbase-v1.p.rapidapi.com/odm-organizations", {
         "method": "GET",
         "headers": {
@@ -15,6 +17,7 @@ export const authStart = () => {
     })
         .then(response => {
             console.log(response);
+            data.push(response)
         })
         .catch(err => {
             console.log(err);
@@ -22,7 +25,8 @@ export const authStart = () => {
 
 
     return {
-        type: actions.AUTH_START
+        type: actions.AUTH_START,
+        payload: data
     }
 }
 
