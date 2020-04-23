@@ -3,7 +3,7 @@
 export {
     initAuth,
     logOut,
-    clearError,
+    fetchGotten,
     fetch,
     authStart
 } from './Auth'
