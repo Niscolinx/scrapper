@@ -3,14 +3,6 @@ import {connect} from 'react-redux';
 import * as actions from '../../../../../event/src/reducers/actions/burgerIndex'
 
 
-const getSession = () => {
-  const data = {
-    type: GET_SESSION,
-    payload: {} //payload is the data/object that is resolved by the promise
-  };
-console.log(data)
-  return data;
-};
 class App extends Component {
   constructor(props) {
     super(props);
