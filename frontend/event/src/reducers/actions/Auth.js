@@ -2,12 +2,34 @@ import * as actions from './actionTypes'
 import fire from '../../../../firebase/firebase'
 
 console.log('beginning')
-export const authStart = () => {
-    return {
+export const Fetch = () => {
+    return dispatch => {
+
+        fetch("https://crunchbase-crunchbase-v1.p.rapidapi.com/odm-organizations", {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "crunchbase-crunchbase-v1.p.rapidapi.com",
+                "x-rapidapi-key": "f57af9a58dmsh40523e0141e59b3p10f99cjsn62392f9553c9"
+            }
+        })
+            .then(response => {
+                console.log(response);
+                dispatch(fetchGotten(response))
+            })
+            .catch(err => {
+                console.log(err);
+            });
+
         type: actions.AUTH_START
     }
 }
 
+export const fetchGotten = (data) =>{
+    return{
+        type: actions.AUTH_START,
+        payload: data
+    }
+}
 console.log('ending')
 
 export const authSuccessCheck = (auth) => {    
