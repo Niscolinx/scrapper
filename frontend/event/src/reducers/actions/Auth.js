@@ -2,7 +2,7 @@ import * as actions from './actionTypes'
 import fire from '../../../../firebase/firebase'
 
 export const fetchGotten = (data) => {
-    console.log('in the data')
+    {console.log('in the data')}
     return {
         type: actions.AUTH_START,
         payload: data
@@ -31,7 +31,6 @@ export const fetch = () => {
 }
 
 
-console.log('end')
 
 
 
