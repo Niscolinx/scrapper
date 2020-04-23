@@ -24,12 +24,12 @@ export const fetch = () => {
 }
 
 export const fetchGotten = (data) =>{
+    console.log('in the data')
     return{
         type: actions.AUTH_START,
         payload: data
     }
 }
-console.log('ending')
 
 export const authSuccessCheck = (auth) => {    
     return dispatch => {
