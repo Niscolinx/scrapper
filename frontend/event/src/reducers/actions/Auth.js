@@ -1,9 +1,9 @@
 import * as actions from './actionTypes'
 import fire from '../../../../firebase/firebase'
 
-console.log('beginning')
 export const fetch = () => {
     return dispatch => {
+        console.log('beginning to fetch')
 
         fetch("https://crunchbase-crunchbase-v1.p.rapidapi.com/odm-organizations", {
             "method": "GET",
