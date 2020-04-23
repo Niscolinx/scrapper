@@ -15,7 +15,6 @@ const authState = (state, action) => {
 
 const authSuccess = (state, action) => {
     return update(state, {
-        ...action,
         loading: false,
         userId: action.userId,
         tokenId: action.tokenId,
@@ -32,7 +31,6 @@ const authFailed = (state, action) => {
 
 const clearError = (state, action) => {
     return update(state, {
-        ...action,
         error: null
     })
 }
