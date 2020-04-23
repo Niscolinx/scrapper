@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        {this.props.session && this.props.users[this.props.session.userId].name}
+        {this.props.loading}
       </div>
     );
   }
