@@ -1,5 +1,5 @@
 import * as actions from './actionTypes'
-import fire from '../../firebase/firebase'
+import fire from '../../../../firebase/firebase'
 
 
 export const authStart = () => {
