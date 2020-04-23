@@ -1,12 +1,12 @@
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
 import {wrapStore} from 'webext-redux';
 import { alias } from 'webext-redux';
-import count from './reducers/count'
+import auth from './reducers/auth'
 import aliases from './reducers/aliases';
 
 
 const rootReducer = {
-    count
+    auth
 }
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
