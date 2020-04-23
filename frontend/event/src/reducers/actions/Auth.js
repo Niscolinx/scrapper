@@ -1,30 +1,30 @@
 import * as actions from './actionTypes'
 import fire from '../../../../firebase/firebase'
 
-export const authStart = () => {
+export const fetch = () => {
+    return dispatch => {
+        console.log('beginning to fetch')
 
-
-    console.log('beginning to fetch')
-
-    let data = []
-
-    fetch("https://crunchbase-crunchbase-v1.p.rapidapi.com/odm-organizations", {
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-host": "crunchbase-crunchbase-v1.p.rapidapi.com",
-            "x-rapidapi-key": "f57af9a58dmsh40523e0141e59b3p10f99cjsn62392f9553c9"
-        }
-    })
-        .then(response => {
-            console.log(response);
-            data.push(response)
+        fetch("https://crunchbase-crunchbase-v1.p.rapidapi.com/odm-organizations", {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "crunchbase-crunchbase-v1.p.rapidapi.com",
+                "x-rapidapi-key": "f57af9a58dmsh40523e0141e59b3p10f99cjsn62392f9553c9"
+            }
         })
-        .catch(err => {
-            console.log(err);
-            data.push(err)
-        });
+            .then(response => {
+                console.log(response);
+                dispatch(fetchGotten(response))
+            })
+            .catch(err => {
+                console.log(err);
+            });
 
+    }
+}
 
+export const fetchGotten = (data) => {
+    console.log('in the data')
     return {
         type: actions.AUTH_START,
         payload: data
