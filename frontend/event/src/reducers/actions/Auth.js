@@ -4,7 +4,7 @@ import fire from '../../../../firebase/firebase'
 export const fetchGotten = (data) => {
     {console.log('in the data')}
     return {
-        type: actions.AUTH_START,
+        type: 'AUTH_START',
         payload: data
     }
 }
