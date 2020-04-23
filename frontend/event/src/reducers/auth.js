@@ -1,5 +1,5 @@
 import * as actionTypes from './actions/actionTypes'
-import update from './utility'
+//import update from './utility'
 
 const initialState = {
     error: null,
@@ -8,9 +8,9 @@ const initialState = {
     tokenId: null
 }
 const authState = (state, action) => {
-    return update(state, {
+    return {
         loading: true
-    })
+    }
 }
 
 const authSuccess = (state, action) => {
