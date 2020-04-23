@@ -7,14 +7,10 @@ const getSession = (originalAction) => {
   }
 };
 
-export default {
-  'GET_SESSION': getSession // the action to proxy and the new action to call
-};
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case 'GET_SESSION':
-      return state + (action.payload || 1);
+    case 'GET_SESSION': return getSession()
     default:
       return state;
   }
