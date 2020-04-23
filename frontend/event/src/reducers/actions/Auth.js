@@ -4,14 +4,14 @@ import fire from '../../../../firebase/firebase'
 export const fetchGotten = (data) => {
     {console.log('in the data')}
     return {
-        type: 'AUTH_START',
+        type: actions.AUTH_START,
         payload: data
     }
 }
-export const fetch = () => {
+export const fetching = () => {
     return function(dispatch){
-        dispatch(fetchGotten(response))
         console.log('beginning to fetch')
+        dispatch(fetchGotten(response))
 
         fetch("https://crunchbase-crunchbase-v1.p.rapidapi.com/odm-organizations", {
             "method": "GET",

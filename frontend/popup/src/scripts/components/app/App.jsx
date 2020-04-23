@@ -32,7 +32,7 @@ const mapStateToProps = state => {
 }
 const mapDispatchToProps = dispatch => {
   return {
-    onInitAuth: () => dispatch(actions.fetch())
+    onInitAuth: () => dispatch(actions.fetching())
   }
 }
 

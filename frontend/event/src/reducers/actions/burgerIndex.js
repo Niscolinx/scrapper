@@ -4,7 +4,7 @@ export {
     initAuth,
     logOut,
     fetchGotten,
-    fetch,
+    fetching,
     authStart
 } from './Auth'
 
