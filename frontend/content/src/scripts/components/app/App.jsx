@@ -14,10 +14,10 @@ class App extends Component {
   }
 
   render() {
-  
+    let working = 'Working well'
     return (
         <div>
-            <div>console.log('It is working wella')</div>
+            <div>{working}</div>
             <div>{this.props.loading}</div>
         </div>
     )
