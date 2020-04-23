@@ -1,6 +1,13 @@
 import * as actions from './actionTypes'
 import fire from '../../../../firebase/firebase'
 
+export const fetchGotten = (data) => {
+    console.log('in the data')
+    return {
+        type: actions.AUTH_START,
+        payload: data
+    }
+}
 export const fetch = () => {
     return dispatch => {
         dispatch(fetchGotten(response))
@@ -23,36 +30,10 @@ export const fetch = () => {
     }
 }
 
-export const fetchGotten = (data) => {
-    console.log('in the data')
-    return {
-        type: actions.AUTH_START,
-        payload: data
-    }
-}
 
 console.log('end')
 
-export const authSuccessCheck = (auth) => {
-    return dispatch => {
 
-        console.log('gotten to redux')
-        let user = fire.auth().currentUser;
-        let token = user.getIdToken()
-        token.then((res) => {
-            localStorage.setItem('userId', auth)
-            localStorage.setItem('token', res)
-            dispatch(authSuccess(auth, res))
-
-            setTimeout(() => {
-                dispatch(logOut())
-            }, 3600 * 1000);
-        })
-            .catch((err) => {
-                dispatch(authFailed(err))
-            })
-    }
-}
 
 export const authSuccess = (auth, res) => {
     return {
