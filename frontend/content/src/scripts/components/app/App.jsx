@@ -14,12 +14,13 @@ class App extends Component {
   }
 
   render() {
+  
     return (
-      <div>
-      {console.log('It is working wella')}
-        {this.props.loading}
-      </div>
-    );
+        <div>
+            <div>console.log('It is working wella')</div>
+            <div>{this.props.loading}</div>
+        </div>
+    )
   }
 }
 
