@@ -20,7 +20,6 @@ export const fetch = () => {
                 console.log(err);
             });
 
-        type: actions.AUTH_START
     }
 }
 
