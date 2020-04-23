@@ -2,7 +2,7 @@ import * as actions from './actionTypes'
 import fire from '../../../../firebase/firebase'
 
 console.log('beginning')
-export const Fetch = () => {
+export const fetch = () => {
     return dispatch => {
 
         fetch("https://crunchbase-crunchbase-v1.p.rapidapi.com/odm-organizations", {
