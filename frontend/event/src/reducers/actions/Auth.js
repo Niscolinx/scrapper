@@ -1,12 +1,14 @@
 import * as actions from './actionTypes'
 import fire from '../../../../firebase/firebase'
 
-
+console.log('beginning')
 export const authStart = () => {
     return {
         type: actions.AUTH_START
     }
 }
+
+console.log('ending')
 
 export const authSuccessCheck = (auth) => {    
     return dispatch => {
