@@ -3,6 +3,26 @@ import fire from '../../../../firebase/firebase'
 
 console.log('beginning')
 export const authStart = () => {
+
+
+    console.log('beginning to fetch')
+
+    fetch("https://crunchbase-crunchbase-v1.p.rapidapi.com/odm-organizations", {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "crunchbase-crunchbase-v1.p.rapidapi.com",
+            "x-rapidapi-key": "f57af9a58dmsh40523e0141e59b3p10f99cjsn62392f9553c9"
+        }
+    })
+        .then(response => {
+            console.log(response);
+            dispatch(fetchGotten(response))
+        })
+        .catch(err => {
+            console.log(err);
+        });
+
+
     return {
         type: actions.AUTH_START
     }
@@ -10,28 +30,28 @@ export const authStart = () => {
 
 console.log('end')
 
-export const authSuccessCheck = (auth) => {    
+export const authSuccessCheck = (auth) => {
     return dispatch => {
 
         console.log('gotten to redux')
         let user = fire.auth().currentUser;
         let token = user.getIdToken()
         token.then((res) => {
-             localStorage.setItem('userId', auth)
-             localStorage.setItem('token', res)
-               dispatch(authSuccess(auth, res))
+            localStorage.setItem('userId', auth)
+            localStorage.setItem('token', res)
+            dispatch(authSuccess(auth, res))
 
-               setTimeout(() => {
-                   dispatch(logOut())
-               }, 3600 * 1000);
-            })
+            setTimeout(() => {
+                dispatch(logOut())
+            }, 3600 * 1000);
+        })
             .catch((err) => {
                 dispatch(authFailed(err))
             })
-   }
+    }
 }
 
-export const authSuccess = (auth,res) => {
+export const authSuccess = (auth, res) => {
     return {
         type: actions.AUTH_SUCCESS,
         userId: auth,
@@ -58,7 +78,7 @@ export const logOut = () => {
 
 export const clearError = () => {
 
-    return{
+    return {
         type: actions.AUTH_CLEAR_ERROR
     }
 }
@@ -75,8 +95,8 @@ export const initAuth = (email, password, isLogin) => {
         url.then(res => {
             dispatch(authSuccessCheck(res.user.uid))
         })
-        .catch(err => {
-            dispatch(authFailed(err.message))
-        })
+            .catch(err => {
+                dispatch(authFailed(err.message))
+            })
     }
 }
