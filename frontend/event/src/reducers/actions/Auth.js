@@ -21,6 +21,7 @@ export const authStart = () => {
         })
         .catch(err => {
             console.log(err);
+            data.push(err)
         });
 
 
