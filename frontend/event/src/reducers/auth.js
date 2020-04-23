@@ -37,7 +37,6 @@ const clearError = (state, action) => {
 
 const authLogOut = (state, action) => {
     return update(state, {
-        ...action,
         loading: false,
         userId: null,
         tokenId: null,
