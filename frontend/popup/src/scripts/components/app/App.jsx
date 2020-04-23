@@ -42,7 +42,6 @@ const mapStateToProps = state => {
     loading: state.auth.loading,
     error: state.auth.error,
     auth: state.auth.tokenId,
-    totalPrice: state.burger.totalPrice
   }
 }
 const mapDispatchToProps = dispatch => {
