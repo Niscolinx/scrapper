@@ -1,5 +1,5 @@
 import * as actionTypes from './actionTypes'
-import update from '../utility'
+import update from './utility'
 
 const initialState = {
     error: null,
