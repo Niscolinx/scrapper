@@ -11,15 +11,6 @@ export const authStart = () => {
 export const authSuccessCheck = (auth) => {    
     return dispatch => {
 
-       // let database = fire.database('https://my-react-burger-1ce01.firebaseio.com');
-        //console.log(database)
-    // var userId = fire.auth().currentUser.uid;
-   
-    // return fire.database().ref('orders/-LzxnBJVUgxe9OV9wlXL').once('value').then(function (snapshot) {
-    //     var username = (snapshot.val().contactform.name) || 'Anonymous';
-    //         console.log(username)
-            
-    //   });
         let user = fire.auth().currentUser;
         let token = user.getIdToken()
         token.then((res) => {
