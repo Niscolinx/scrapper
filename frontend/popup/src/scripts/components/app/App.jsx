@@ -36,17 +36,19 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    session: state.session,
-    users: state.users
-  };
-};
 
+const mapStateToProps = state => {
+  return {
+    loading: state.auth.loading,
+    error: state.auth.error,
+    auth: state.auth.tokenId,
+    totalPrice: state.burger.totalPrice
+  }
+}
 const mapDispatchToProps = dispatch => {
   return {
     onInitAuth: (email, password, isLogin) => dispatch(actions.initAuth(email, password, isLogin))
   }
 }
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
