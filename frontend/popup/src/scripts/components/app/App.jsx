@@ -9,7 +9,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-      this.props.onInitAuth()
+     // this.props.onInitAuth()
   }
 
   render() {
@@ -32,7 +32,7 @@ const mapStateToProps = state => {
 }
 const mapDispatchToProps = dispatch => {
   return {
-    onInitAuth: () => dispatch(actions.fetching())
+   // onInitAuth: () => dispatch(actions.fetching())
   }
 }
 
