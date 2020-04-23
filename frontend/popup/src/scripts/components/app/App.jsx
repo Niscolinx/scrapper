@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import * as actions from '../../../../../event/src/reducers/actions/burgerIndex'
+
 
 const getSession = () => {
   const data = {
