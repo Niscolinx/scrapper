@@ -3,14 +3,14 @@ import * as actionTypes from './actions/actionTypes'
 
 const initialState = {
     error: null,
-    loading: false,
+    loading: "Ya bro",
     userId: null,
     tokenId: null
 }
 const authState = (state, action) => {
     console.log('connected to redux, woow')
     return {
-        loading: true
+        loading: "It is working bro"
     }
 }
 
