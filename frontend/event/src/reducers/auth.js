@@ -8,7 +8,7 @@ const initialState = {
     tokenId: null
 }
 const authState = (state, action) => {
-    console.log(action.payload)
+    console.log('This is the payload',action.payload)
     return {
         loading: 'hello world'
     }
