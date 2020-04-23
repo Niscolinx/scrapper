@@ -3,6 +3,8 @@ import {wrapStore} from 'webext-redux';
 import { alias } from 'webext-redux';
 import auth from './reducers/auth'
 import aliases from './reducers/aliases';
+import thunk from 'redux-thunk'
+
 
 
 const rootReducer = {
