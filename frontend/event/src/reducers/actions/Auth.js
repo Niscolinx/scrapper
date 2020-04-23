@@ -1,7 +1,6 @@
 import * as actions from './actionTypes'
 import fire from '../../../../firebase/firebase'
 
-console.log('beginning')
 export const authStart = () => {
 
 
@@ -16,7 +15,6 @@ export const authStart = () => {
     })
         .then(response => {
             console.log(response);
-            dispatch(fetchGotten(response))
         })
         .catch(err => {
             console.log(err);
