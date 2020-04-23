@@ -8,7 +8,7 @@ const initialState = {
     tokenId: null
 }
 const authState = (state, action) => {
-    console.log('connected to redux')
+    console.log('connected to redux, woow')
     return {
         loading: true
     }
