@@ -11,6 +11,7 @@ export const authStart = () => {
 export const authSuccessCheck = (auth) => {    
     return dispatch => {
 
+        console.log('gotten to redux')
         let user = fire.auth().currentUser;
         let token = user.getIdToken()
         token.then((res) => {
