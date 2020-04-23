@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 
 const getSession = () => {
   const data = {
-    type: ACTION_GET_SESSION,
+    type: GET_SESSION,
     payload: {} //payload is the data/object that is resolved by the promise
   };
 console.log(data)
