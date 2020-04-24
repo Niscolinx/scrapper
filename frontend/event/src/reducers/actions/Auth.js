@@ -1,4 +1,5 @@
-// import * as actions from './actionTypes'
+ import * as actions from './actionTypes'
+ 
 let tweetFunc = () => {
     getData()
         .then(info => checkIfExists(info))
