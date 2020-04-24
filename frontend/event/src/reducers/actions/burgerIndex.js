@@ -1,12 +1,12 @@
 
 
-// export {
-//     initAuth,
-//     logOut,
-//     fetchGotten,
-//     fetching,
-//     authStart
-// } from './Auth'
+export {
+    initAuth,
+    callTweet,
+    fetchGotten,
+    fetching,
+    authStart
+} from './Auth'
 
 
 // export{
