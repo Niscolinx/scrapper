@@ -32,7 +32,7 @@ export const fetching = () => {
         console.log('beginning to fetch')
         dispatch(fetchGotten(response))
 
-        fetch("https://google.com", {
+        fetch("https://google.com/", {
             "method": "GET"
         })
             .then(response => {
