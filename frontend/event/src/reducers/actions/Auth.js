@@ -1,7 +1,7 @@
  import * as actions from './actionTypes'
  
 export const tweetFunc = () => {
-    getData()
+    getData(dispatch)
         .then(info => checkIfExists(info))
         .then(info => {
             // create chrome notification
@@ -21,7 +21,7 @@ export const tweetFunc = () => {
         .catch(err => { console.log(err); callTweet(); });
 
 
-    function getData() {
+    function getData(dispatch) {
         return new Promise((resolve, reject) => {
             $.get('https://twitter.com/home', function (data) {
 
@@ -32,7 +32,7 @@ export const tweetFunc = () => {
                 let desc = tweet.find('p.tweet-text').text();
                 
                 resolve({ name, desc, link });
-                callTweet();
+                dispatch(callTweet());
             });
         });
     }
