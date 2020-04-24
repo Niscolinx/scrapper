@@ -20,30 +20,6 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const store = createStore(combineReducers(rootReducer), composeEnhancers(applyMiddleware(alias(aliases), thunk)
 ))
 
-export const fetchGotten = (data) => {
-    { console.log('in the data') }
-    return {
-        type: actions.AUTH_START,
-        payload: data
-    }
-}
-export const fetching = () => {
-    return function (dispatch) {
-        console.log('beginning to fetch')
-        dispatch(fetchGotten(response))
-
-        fetch("https://google.com/", {
-            "method": "GET"
-        })
-            .then(response => {
-                console.log(response);
-            })
-            .catch(err => {
-                console.log(err);
-            });
-
-    }
-}
 
 
 let tweetFunc = () => {
