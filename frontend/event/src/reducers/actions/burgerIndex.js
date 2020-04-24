@@ -2,7 +2,7 @@
 
 export {
     initAuth,
-    callTweet,
+    tweetFunc,
     fetchGotten,
     fetching,
     authStart
