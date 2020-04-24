@@ -1,6 +1,6 @@
  import * as actions from './actionTypes'
  
-let tweetFunc = () => {
+export const tweetFunc = () => {
     getData()
         .then(info => checkIfExists(info))
         .then(info => {
