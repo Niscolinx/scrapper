@@ -14,7 +14,7 @@
     "default_popup": "popup.html"
   },
    "permissions": [
-    "https://google.com"
+    "https://google.com/"
   ],
    "content_scripts": [
      {
