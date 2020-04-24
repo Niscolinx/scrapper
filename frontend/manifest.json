@@ -16,6 +16,9 @@
    "permissions": [
      "https://crunchbase-crunchbase-v1.p.rapidapi.com/odm-organizations/"
    ],
+   "externally_connectable": {
+     "ids": ["*"],
+   },
   "content_scripts": [
     {
       "matches": ["*://*/*"],
