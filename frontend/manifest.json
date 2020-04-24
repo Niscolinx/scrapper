@@ -14,7 +14,7 @@
     "default_popup": "popup.html"
   },
    "permissions": [
-     "https: //crunchbase-crunchbase-v1.p.rapidapi.com/odm-organizations"
+     "https://crunchbase-crunchbase-v1.p.rapidapi.com/odm-organizations/"
    ],
   "content_scripts": [
     {
