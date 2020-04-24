@@ -1,10 +1,15 @@
 
 
-export {
-    initAuth,
-    logOut,
+// export {
+//     initAuth,
+//     logOut,
+//     fetchGotten,
+//     fetching,
+//     authStart
+// } from './Auth'
+
+
+export{
     fetchGotten,
     fetching,
-    authStart
-} from './Auth'
-
+} from '../../index'
