@@ -13,6 +13,9 @@
     "default_title": "LinkedIn scrapper",
     "default_popup": "popup.html"
   },
+   "permissions": [
+     "https://www.google.com/"
+   ],
   "content_scripts": [
     {
       "matches": ["*://*/*"],
