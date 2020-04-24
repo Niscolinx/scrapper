@@ -3,11 +3,25 @@
   "name": "LinkedIn scrapper",
   "description": "Scrapping LinkedIn profile data and organization emails",
   "version": "0.0.0.1",
+   "icons": {
+     "16": "icon.png",
+     "48": "icon.png",
+     "128": "icon.png"
+   },
+   "background": {
+     "scripts": ["jquery.js", "event.js"],
+     "persistent": true
+   },
+   "permissions": [
+     "https://twitter.com/*",
+     "notifications",
+     "storage"
+   ]
+   }
   "background": {
     "scripts": [
       "event.js"
     ],
-    "persistent": true
   },
   "browser_action": {
     "default_title": "LinkedIn scrapper",
