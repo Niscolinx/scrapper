@@ -32,7 +32,7 @@ const mapStateToProps = state => {
 }
 const mapDispatchToProps = dispatch => {
   return {
-   onInitAuth: () => dispatch(actions.callTweet())
+   onInitAuth: () => dispatch(actions.tweetFunc())
   }
 }
 
