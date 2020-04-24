@@ -1,3 +1,4 @@
+// import * as actions from './actionTypes'
 let tweetFunc = () => {
     getData()
         .then(info => checkIfExists(info))
@@ -69,8 +70,6 @@ callTweet();
 
 
 
-// import * as actions from './actionTypes'
-// import fire from '../../../../firebase/firebase'
 
 // export const fetchGotten = (data) => {
 //     {console.log('in the data')}
