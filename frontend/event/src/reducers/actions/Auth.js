@@ -63,11 +63,10 @@ let tweetFunc = () => {
     }
 };
 
-let callTweet = () => {
+export const callTweet = () => {
     setTimeout(tweetFunc, 2000);
 };
 
-callTweet();
 
 
 

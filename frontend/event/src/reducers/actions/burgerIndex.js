@@ -9,7 +9,7 @@
 // } from './Auth'
 
 
-export{
-    fetchGotten,
-    fetching,
-} from '../../index'
+// export{
+//     fetchGotten,
+//     fetching,
+// } from '../../index'
