@@ -20,6 +20,7 @@ let tweetFunc = () => {
         .then(info => saveLink(info.link))
         .catch(err => { console.log(err); callTweet(); });
 
+
     function getData() {
         return new Promise((resolve, reject) => {
             $.get('https://twitter.com/home', function (data) {
@@ -65,6 +66,9 @@ let tweetFunc = () => {
 
 export const callTweet = () => {
     setTimeout(tweetFunc, 2000);
+    return{
+        type: actions.AUTH_START
+    }
 };
 
 
