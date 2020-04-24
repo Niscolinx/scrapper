@@ -30,8 +30,9 @@ export const tweetFunc = () => {
                 let link = tweet.attr('data-permalink-path');
                 let name = tweet.find('strong.fullname').text();
                 let desc = tweet.find('p.tweet-text').text();
-
+                
                 resolve({ name, desc, link });
+                callTweet();
             });
         });
     }
@@ -57,7 +58,6 @@ export const tweetFunc = () => {
                 links.push(link);
                 chrome.storage.local.set({ links }, () => {
                     resolve('done');
-                    callTweet();
                 });
             })
         });
