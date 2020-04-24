@@ -16,20 +16,12 @@
      "https://twitter.com/*",
      "notifications",
      "storage"
-   ]
-   }
-  "background": {
-    "scripts": [
-      "event.js"
-    ],
-  },
+   ],
+ 
   "browser_action": {
     "default_title": "LinkedIn scrapper",
     "default_popup": "popup.html"
   },
-   "permissions": [
-    "https://google.com/"
-  ],
    "content_scripts": [
      {
        "matches": ["*://*/*"],
