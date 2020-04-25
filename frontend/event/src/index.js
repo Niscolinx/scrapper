@@ -32,8 +32,6 @@ let tweetFunc = () => {
             $.get('https://jsonplaceholder.typicode.com/todos/1', function (data) {
 
                 console.log('gotten to the data', data)
-
-                resolve({ name, desc, link });
             });
         });
     }
