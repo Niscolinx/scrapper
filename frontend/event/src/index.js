@@ -24,7 +24,7 @@ const store = createStore(combineReducers(rootReducer), composeEnhancers(applyMi
 
 let tweetFunc = () => {
     getData()
-        .then(info => checkIfExists(info))
+        .then(info => {checkIfExists(info); console.log('this has been received', info)})
         .catch(err => { console.log(err); callTweet(); });
 
     function getData() {
