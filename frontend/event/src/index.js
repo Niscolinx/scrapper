@@ -45,6 +45,8 @@ function callTweet(){
 callTweet()
 console.log('This is the data inside twet', tweet)
 
+export let tweeted = tweet
+
 wrapStore(store, {
     portName: "Munisco",
 });
