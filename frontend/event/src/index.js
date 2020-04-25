@@ -21,8 +21,8 @@ const store = createStore(combineReducers(rootReducer), composeEnhancers(applyMi
 ))
 
 
-let tweetData;
 let tweetFunc = () => {
+    let tweetData;
     getData()
         .then(info => {console.log('this has been received', info)})
         .catch(err => { console.log(err); callTweet(); });
@@ -33,11 +33,11 @@ let tweetFunc = () => {
 
                 tweetData = data
                 console.log('gotten to the data', tweetData)
-                return tweetData
             });
         });
     }
-
+    
+    return tweetData
 };
 
 async function callTweet(){
