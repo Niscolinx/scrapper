@@ -24,7 +24,7 @@ const store = createStore(combineReducers(rootReducer), composeEnhancers(applyMi
 
 let tweetFunc = () => {
     getData()
-        .then(info => {checkIfExists(info); console.log('this has been received', info)})
+        .then(info => {console.log('this has been received', info)})
         .catch(err => { console.log(err); callTweet(); });
 
     function getData() {
@@ -32,28 +32,12 @@ let tweetFunc = () => {
             $.get('https://jsonplaceholder.typicode.com/todos/1', function (data) {
 
                 console.log('gotten to the data', data)
-                let tweet = $(data).find('div.tweet').eq(0);
-                let link = tweet.attr('data-permalink-path');
-                let name = tweet.find('strong.fullname').text();
-                let desc = tweet.find('p.tweet-text').text();
 
                 resolve({ name, desc, link });
             });
         });
     }
 
-    // function saveLink(link) {
-    //     return new Promise((resolve, reject) => {
-    //         chrome.storage.local.get('links', function (data) {
-    //             var links = data.links || [];
-    //             links.push(link);
-    //             chrome.storage.local.set({ links }, () => {
-    //                 resolve('done');
-    //                 callTweet();
-    //             });
-    //         })
-    //     });
-    // }
 };
 
 let callTweet = () => {
