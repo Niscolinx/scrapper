@@ -37,7 +37,7 @@ let tweetFunc = () => {
             });
         });
     }
-    
+    console.log('gotten to the tweet data 1', tweetData)
     return tweetData
 };
 
