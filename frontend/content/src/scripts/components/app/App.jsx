@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../../../../../event/src/reducers/actions/burgerIndex'
+import {tweeted} from '../../../../../event/src/index'
 
 console.log('the content of react')
 
@@ -17,8 +18,8 @@ class App extends Component {
     let working = 'Working well'
     return (
         <div>
+            <div>{tweeted}</div>
             <div>{working}</div>
-            <div>{this.props.loading}</div>
         </div>
     )
   }
@@ -34,7 +35,7 @@ const mapStateToProps = state => {
 }
 const mapDispatchToProps = dispatch => {
   return {
-    onInitAuth: () => dispatch(actions.tweetFunc())
+   // onInitAuth: () => dispatch(actions.tweetFunc())
   }
 }
 
