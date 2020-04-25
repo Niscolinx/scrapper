@@ -39,8 +39,11 @@ let tweetFunc = () => {
 
 };
 
-let callTweet = () => {
-    tweetFunc()
+async function callTweet(){
+    console.log('calling');
+    const result = await resolveAfter2Seconds();
+    console.log(result);
+  // expected output: 'resolved'
 };
 callTweet()
 console.log('This is the data inside tweet', tweetData)
