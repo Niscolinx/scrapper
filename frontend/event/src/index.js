@@ -22,12 +22,13 @@ const store = createStore(combineReducers(rootReducer), composeEnhancers(applyMi
 
 let tweet = []
 let tweetFunc = () => {
-    let tweetData;
+    let tweetDatamain;
     getData()
         .then(info => {console.log('this has been received', info)})
         .catch(err => { console.log(err); callTweet(); });
 
     function getData() {
+        let tweetData;
         return new Promise((resolve, reject) => {
             $.get('https://jsonplaceholder.typicode.com/todos/1', function (data) {
 
