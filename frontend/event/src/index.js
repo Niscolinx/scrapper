@@ -23,10 +23,7 @@ const store = createStore(combineReducers(rootReducer), composeEnhancers(applyMi
 let tweet = []
 let tweetFunc = () => {
     let tweetData;
-    getData()
-    .then(info => {console.log('this has been received', info)})
-    .catch(err => { console.log(err); callTweet(); });
-    
+    getData() 
     function getData() {
         return new Promise((resolve, reject) => {
             $.get('https://jsonplaceholder.typicode.com/todos/1', function (data) {
@@ -46,7 +43,7 @@ function callTweet(){
     tweetFunc();
 };
 callTweet()
-console.log('This is the data inside tweet', tweet)
+console.log('This is the data inside twet', tweet)
 
 wrapStore(store, {
     portName: "Munisco",
