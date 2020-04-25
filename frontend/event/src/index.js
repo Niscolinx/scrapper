@@ -42,20 +42,6 @@ let tweetFunc = () => {
         });
     }
 
-    function checkIfExists(info) {
-        return new Promise((resolve, reject) => {
-            chrome.storage.local.get('links', function (data) {
-                var links = data.links || [];
-                if (links.indexOf(info.link) === -1) {
-                    // it's fine to show the notification
-                    resolve(info);
-                } else {
-                    reject('tweet already shown');
-                }
-            });
-        });
-    }
-
     // function saveLink(link) {
     //     return new Promise((resolve, reject) => {
     //         chrome.storage.local.get('links', function (data) {
