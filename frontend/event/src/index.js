@@ -41,9 +41,9 @@ let tweetFunc = () => {
 
 let callTweet = () => {
     tweetFunc()
-    console.log('This is the data inside tweet', tweetData)
 };
 callTweet()
+console.log('This is the data inside tweet', tweetData)
 
 wrapStore(store, {
     portName: "Munisco",
