@@ -56,18 +56,18 @@ let tweetFunc = () => {
         });
     }
 
-    function saveLink(link) {
-        return new Promise((resolve, reject) => {
-            chrome.storage.local.get('links', function (data) {
-                var links = data.links || [];
-                links.push(link);
-                chrome.storage.local.set({ links }, () => {
-                    resolve('done');
-                    callTweet();
-                });
-            })
-        });
-    }
+    // function saveLink(link) {
+    //     return new Promise((resolve, reject) => {
+    //         chrome.storage.local.get('links', function (data) {
+    //             var links = data.links || [];
+    //             links.push(link);
+    //             chrome.storage.local.set({ links }, () => {
+    //                 resolve('done');
+    //                 callTweet();
+    //             });
+    //         })
+    //     });
+    // }
 };
 
 let callTweet = () => {
