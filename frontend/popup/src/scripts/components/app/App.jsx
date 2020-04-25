@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import * as actions from '../../../../../event/src/reducers/actions/burgerIndex'
+import {tweeted} from '../../../../../event/src/index'
 
 let jsonData = []
 class App extends Component {
@@ -9,7 +10,7 @@ class App extends Component {
     }
 
     componentDidMount() {
-      
+
     }
       
 
@@ -17,7 +18,7 @@ class App extends Component {
         return (
             <div>
                 {console.log('It is working wella')}
-                {jsonData}
+                {tweeted}
             </div>
         )
     }
