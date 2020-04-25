@@ -12,9 +12,9 @@ class App extends Component {
   componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/todos/1')
       .then(response => response.json())
+      jsonData.push(json)
       .then(json => 
         console.log(json),
-        jsonData.push(json)
         )
   }
 
