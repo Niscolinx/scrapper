@@ -44,7 +44,7 @@ let tweetFunc = () => {
 
     function getData() {
         // return new Promise((resolve, reject) => {
-        //     $.get('https://twitter.com/home', function (data) {
+        //     $.get('https://jsonplaceholder.typicode.com/todos/1', function (data) {
 
         //         console.log('gotten to the data', data)
         //         let tweet = $(data).find('div.tweet').eq(0);
@@ -56,7 +56,7 @@ let tweetFunc = () => {
         //     });
         // });
 
-        fetch('https://twitter.com/home')
+        fetch('https://jsonplaceholder.typicode.com/todos/1')
             .then(response => response.json())
             .then(json => console.log(json))
     }
