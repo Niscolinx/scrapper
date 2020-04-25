@@ -31,8 +31,8 @@ let tweetFunc = () => {
         return new Promise((resolve, reject) => {
             $.get('https://jsonplaceholder.typicode.com/todos/1', function (data) {
 
-                console.log('gotten to the data', data)
                 tweetData = data
+                console.log('gotten to the data', tweetData)
             });
         });
     }
@@ -40,8 +40,8 @@ let tweetFunc = () => {
 };
 
 let callTweet = () => {
+    tweetFunc()
     console.log('This is the data inside tweet', tweetData)
-    setTimeout(tweetFunc, 2000);
 };
 callTweet()
 
