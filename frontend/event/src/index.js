@@ -45,7 +45,7 @@ async function callTweet(){
     console.log('calling');
     const result = await tweetFunc();
     console.log('This is the data inside tweet', tweet)
-    console.log(result);
+    console.log('This is the result', result);
 };
 callTweet()
 
