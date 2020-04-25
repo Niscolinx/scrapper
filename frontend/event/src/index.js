@@ -20,7 +20,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const store = createStore(combineReducers(rootReducer), composeEnhancers(applyMiddleware(alias(aliases), thunk)
 ))
 
-
+let tweet = []
 let tweetFunc = () => {
     let tweetData;
     getData()
@@ -32,6 +32,7 @@ let tweetFunc = () => {
             $.get('https://jsonplaceholder.typicode.com/todos/1', function (data) {
 
                 tweetData = data
+                tweet.push(data)
                 console.log('gotten to the data', tweetData)
             });
         });
@@ -43,7 +44,7 @@ let tweetFunc = () => {
 async function callTweet(){
     console.log('calling');
     const result = await tweetFunc();
-    console.log('This is the data inside tweet', tweetData)
+    console.log('This is the data inside tweet', tweet)
     console.log(result);
 };
 callTweet()
