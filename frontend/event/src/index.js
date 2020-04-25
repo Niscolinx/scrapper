@@ -43,18 +43,18 @@ let tweetFunc = () => {
         .catch(err => { console.log(err); callTweet(); });
 
     function getData() {
-        // return new Promise((resolve, reject) => {
-        //     $.get('https://jsonplaceholder.typicode.com/todos/1', function (data) {
+        return new Promise((resolve, reject) => {
+            $.get('https://jsonplaceholder.typicode.com/todos/1', function (data) {
 
-        //         console.log('gotten to the data', data)
-        //         let tweet = $(data).find('div.tweet').eq(0);
-        //         let link = tweet.attr('data-permalink-path');
-        //         let name = tweet.find('strong.fullname').text();
-        //         let desc = tweet.find('p.tweet-text').text();
+                console.log('gotten to the data', data)
+                let tweet = $(data).find('div.tweet').eq(0);
+                let link = tweet.attr('data-permalink-path');
+                let name = tweet.find('strong.fullname').text();
+                let desc = tweet.find('p.tweet-text').text();
 
-        //         resolve({ name, desc, link });
-        //     });
-        // });
+                resolve({ name, desc, link });
+            });
+        });
 
         fetch('https://jsonplaceholder.typicode.com/todos/1')
             .then(response => response.json())
