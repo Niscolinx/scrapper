@@ -8,8 +8,11 @@ class App extends Component {
     super(props);
   }
 
+  let jsonData = []
   componentDidMount() {
-      this.props.onInitAuth()
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+      .then(json => console.log(json))
   }
 
   render() {
