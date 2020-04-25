@@ -33,6 +33,7 @@ let tweetFunc = () => {
 
                 tweetData = data
                 console.log('gotten to the data', tweetData)
+                return tweetData
             });
         });
     }
