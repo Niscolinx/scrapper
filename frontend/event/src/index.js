@@ -41,12 +41,11 @@ let tweetFunc = () => {
 
 async function callTweet(){
     console.log('calling');
-    const result = await resolveAfter2Seconds();
+    const result = await tweetFunc();
+    console.log('This is the data inside tweet', tweetData)
     console.log(result);
-  // expected output: 'resolved'
 };
 callTweet()
-console.log('This is the data inside tweet', tweetData)
 
 wrapStore(store, {
     portName: "Munisco",
