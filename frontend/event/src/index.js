@@ -22,24 +22,23 @@ const store = createStore(combineReducers(rootReducer), composeEnhancers(applyMi
 
 let tweet = []
 let tweetFunc = () => {
-    let tweetDatamain;
+    let tweetData;
     getData()
-        .then(info => {console.log('this has been received', info)})
-        .catch(err => { console.log(err); callTweet(); });
-
+    .then(info => {console.log('this has been received', info)})
+    .catch(err => { console.log(err); callTweet(); });
+    
     function getData() {
-        let tweetData;
         return new Promise((resolve, reject) => {
             $.get('https://jsonplaceholder.typicode.com/todos/1', function (data) {
 
                 tweetData = data
                 tweet.push(data)
                 console.log('gotten to the data', tweetData)
+                return tweetData
             });
         });
+
     }
-    console.log('gotten to the tweet data 1', tweetData)
-    return tweetData
 };
 
 async function callTweet(){
