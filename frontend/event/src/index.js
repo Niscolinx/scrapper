@@ -25,21 +25,6 @@ const store = createStore(combineReducers(rootReducer), composeEnhancers(applyMi
 let tweetFunc = () => {
     getData()
         .then(info => checkIfExists(info))
-        .then(info => {
-            // create chrome notification
-
-            let options = {
-                type: "basic",
-                title: info.name,
-                message: info.desc,
-                iconUrl: "icon.png"
-            };
-
-            chrome.notifications.create(info.link, options);
-
-            return info;
-        })
-        .then(info => saveLink(info.link))
         .catch(err => { console.log(err); callTweet(); });
 
     function getData() {
@@ -55,10 +40,6 @@ let tweetFunc = () => {
                 resolve({ name, desc, link });
             });
         });
-
-        fetch('https://jsonplaceholder.typicode.com/todos/1')
-            .then(response => response.json())
-            .then(json => console.log(json))
     }
 
     function checkIfExists(info) {
