@@ -3,23 +3,26 @@ import {connect} from 'react-redux';
 import * as actions from '../../../../../event/src/reducers/actions/burgerIndex'
 
 
+let jsonData = []
 class App extends Component {
   constructor(props) {
     super(props);
   }
 
-  let jsonData = []
   componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/todos/1')
       .then(response => response.json())
-      .then(json => console.log(json))
+      .then(json => 
+        console.log(json),
+        jsonData.push(json)
+        )
   }
 
   render() {
     return (
       <div>
       {console.log('It is working wella')}
-        {this.props.loading}
+        {jsonData}
       </div>
     );
   }
