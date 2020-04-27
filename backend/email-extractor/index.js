@@ -1,4 +1,5 @@
 const fs = require('fs');
+
 const csv = require('fast-csv');
 const prompt = require('prompt');
 const Nightmare = require('nightmare');
@@ -12,7 +13,7 @@ let extractedData = {
 let nightmare;
 
 // Get connection names from connections.csv
-let stream = fs.createReadStream("Connections.csv");
+let stream = fs.createReadStream( "Connections.csv");
 csv
     .fromStream(stream, { headers: true })
     .on("data", function (data) {
