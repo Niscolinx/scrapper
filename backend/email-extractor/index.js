@@ -7,6 +7,7 @@ const ora = require('ora');
 const spinner = ora('Getting data, this may take a while depending on the amount of connections')
 
 let connections = [];
+console.log(connections)
 let extractedData = {
     extracted_data: []
 };
